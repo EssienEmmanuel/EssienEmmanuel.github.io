@@ -147,6 +147,8 @@ section {
   /* background-color: white; */
   color: white;
   margin-top: 30px;
+  padding-bottom: 50px;
+  /* border: 1px solid green; */
 }
 
 section h2 {
@@ -187,7 +189,7 @@ section h2 {
 }
 
 .card:hover {
-  box-shadow: 5px 10px 5px green;
+  /* box-shadow: 5px 10px 5px green; */
 }
 
 .card img {
@@ -217,8 +219,8 @@ section h2 {
 /* ---------------------------ABOUT ME  */
 
 .about-me {
-  margin-top: 60px;
-  background-color: black;
+  margin-top: 150px;
+  /* background-color: black; */
   color: white;
   padding-bottom: 80px;
 }
@@ -387,11 +389,12 @@ section h2 {
 
 .projects {
   padding-bottom: 40px;
+  margin-top: 100px;
 }
 
 .projects h2 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
-  font-size: 37px;
+  font-size: 40px;
   font-weight: 600;
 
   margin-bottom: 50px;
@@ -404,6 +407,7 @@ section h2 {
   grid-template-columns: 1fr 1fr;
   row-gap: 70px;
   column-gap: 30px;
+  margin-top: 50px;
 }
 
 .my-projects {
@@ -449,7 +453,7 @@ section h2 {
 
 .contact-me {
   /* padding-top: 30px; */
-  margin-top: 70px;
+  margin-top: 100px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -496,7 +500,7 @@ section h2 {
 
 .contact-me-form h2 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
 
   text-align: center;
@@ -525,8 +529,8 @@ form input {
 }
 
 form input:hover {
-  border: 1px solid green;
-  border-color: green;
+  border: 1px solid white;
+  border-color: white;
   border-radius: 5px;
 }
 
@@ -547,17 +551,17 @@ input[type="mail"] {
   padding: 12px 20px;
 }
 
-#fname,
-#email {
+.fname,
+.email {
   height: 60px;
 }
 
-#fname,
-#email #message {
+.fname,
+.email #message {
   width: 100%;
 }
 
-#message {
+.message {
   height: 100px;
   padding: 12px 20px;
 
@@ -575,22 +579,31 @@ input[type="mail"] {
   cursor: pointer;
 }
 
-#message:hover {
+.message:hover {
   /* height: 150px; */
   border-color: green;
 }
 
-#message::placeholder {
+.message::placeholder {
   color: white;
 }
 
-#message:focus {
+.message:focus {
   height: 150px;
 }
 
-#message:focus::placeholder {
+.message:focus::placeholder {
   color: transparent;
   /* height: 150px; */
+}
+
+.msg-status {
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgb(30, 179, 30);
+
+  display: none;
 }
 
 #msg-button {
@@ -616,6 +629,47 @@ input[type="mail"] {
   background-color: green;
 }
 
+.error-heading1,
+.error-heading2 {
+  /* border: 1px solid red;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: red; */
+  color: red;
+  font-size: 22px;
+  text-align: center;
+
+  display: none;
+}
+
+.fname-error,
+.email-error,
+.valid-email-error,
+.msg-error {
+  color: red;
+  font-size: 18px;
+
+  display: none;
+}
+/* .error-heading2 { */
+/* border: 1px solid red;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: red;
+
+  display: none;
+} */
+
+.error {
+  border: 1px solid red;
+  background-color: black;
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
 /* ---------------------------Footer  */
 
 footer {
@@ -637,7 +691,7 @@ footer {
   cursor: pointer;
 }
 
-#footer ul li:hover {
+#footer ul li a:hover {
   color: gray;
 }
 
