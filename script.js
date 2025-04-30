@@ -11,6 +11,9 @@ const msgButton = document.querySelector("#msg-button");
 const errorHead1 = document.querySelector(".error-heading1");
 const errorHead2 = document.querySelector(".error-heading2");
 
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
+
 function regard() {
   const greeting = document.querySelector(".greeting");
   const date = new Date();
@@ -33,14 +36,44 @@ function regard() {
 
 regard();
 
+// --------------------------------------Event Listeners
+
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation(); // prevent immediate closing when hamburger clicked
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+});
+
+// Listen for clicks anywhere in the document
+document.addEventListener("click", (e) => {
+  if (
+    menu.style.display === "block" &&
+    !menu.contains(e.target) &&
+    e.target !== hamburger &&
+    !hamburger.contains(e.target)
+  ) {
+    menu.style.display = "none";
+  }
+});
+
+const body = document.body;
+console.log("body");
+
+// body.addEventListener("click", () => {
+//   if (menu.style.display === "block") {
+//     menu.style.display = "none";
+//   }
+// });
+
 readMoreBtn.addEventListener("click", () => {
   aboutMe.classList.toggle("expanded");
   readMoreBtn.textContent = aboutMe.classList.contains("expanded")
     ? "Read Less"
     : "Read More";
 });
-
-// --------------------------------------Event Listeners
 
 msgButton.addEventListener("click", function (e) {
   e.preventDefault();
@@ -82,7 +115,6 @@ msgButton.addEventListener("click", function (e) {
 
   if (!mailValue.match(emailPattern)) {
     mail.style.border = "1px solid red";
-    // validEmail.style.display = "block";
     isValid = false;
   } else {
     mail.style.border = "1px solid green";
@@ -93,35 +125,37 @@ msgButton.addEventListener("click", function (e) {
     msgStatus.style.display = "block";
     msgStatus.style.color = "green";
     msgStatus.textContent = "Message Sent!";
+
+    // fNameValue = "";
+    // mailValue = "";
+    // messageValue = "";
   }
 
   fName.addEventListener("click", () => {
     fName.classList.remove("error");
-    // mail.classList.remove("error");
-    // message.classList.remove("error");
 
     fNameError.style.display = "none";
     emailError.style.display = "none";
     msgError.style.display = "none";
+
+    msgStatus.style.display = "none";
   });
 
   mail.addEventListener("click", () => {
-    // fName.classList.remove("error");
     mail.classList.remove("error");
-    // message.classList.remove("error");
 
-    // fNameError.style.display = "none";
-    // emailError.style.display = "none";
     msgError.style.display = "none";
+
+    msgStatus.style.display = "none";
   });
 
   message.addEventListener("click", () => {
-    // fName.classList.remove("error");
-    // mail.classList.remove("error");
     message.classList.remove("error");
 
     fNameError.style.display = "none";
     emailError.style.display = "none";
     msgError.style.display = "none";
+
+    msgStatus.style.display = "none";
   });
 });
