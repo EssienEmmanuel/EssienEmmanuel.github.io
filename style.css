@@ -188,9 +188,10 @@ nav ul li a span:hover {
   background-size: cover;
   /* background-color: #5b4943; */
 }
-
+/* 
 .main {
   display: grid;
+  row-gap: 15px;
 
   padding-top: 100px;
 
@@ -198,26 +199,38 @@ nav ul li a span:hover {
   justify-content: center;
 
   color: white;
-  /* color: black; */
+  /* color: black; 
+} */
+
+.main-info {
+  display: grid;
+  row-gap: 15px;
+
+  padding-top: 100px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: white;
 }
 
 .main-info h1 {
   font-size: 100px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
 }
 
-h1 span {
+/* h1 span {
   font-size: 100px;
   margin-bottom: 15px;
 
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
-}
+} */
 
 .main-info p {
   font-size: 22px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
 }
 
@@ -784,9 +797,9 @@ footer {
 }
 
 @media (max-width: 1020px) {
-  .main {
-    padding-top: 50px;
-  }
+  /* .main {
+    padding-top: 100px;
+  } */
 
   .card {
     display: grid;
@@ -881,15 +894,12 @@ footer {
 }
 
 @media (max-width: 650px) {
-  .h1-span {
-    font-size: 75px;
-  }
   .main-info h1 {
     font-size: 75px;
   }
 
   .main-info p {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .about-me h2 {
@@ -907,6 +917,22 @@ footer {
   }
 
   @media (max-width: 550px) {
+    .main-info {
+      display: grid;
+      row-gap: 15px;
+
+      /* padding-top: 100px; */
+
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+    }
+
+    .main-info h1 {
+      font-size: 60px;
+    }
+
     .about-me-p p {
       font-size: 17px;
       max-width: 280px;
@@ -934,6 +960,16 @@ footer {
   }
 
   @media (max-width: 480px) {
+    .main-info {
+      display: grid;
+      row-gap: 15px;
+
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+    }
+
     .main-info h1 {
       font-size: 50px;
     }
@@ -945,5 +981,39 @@ footer {
       margin: auto;
       overflow: hidden;
     }
+  }
+}
+
+/* Max Height */
+
+/* @media (max-height: 920px) {
+  .hero {
+    min-height: 900px;
+
+    padding-top: 100px;
+  }
+}
+
+@media (max-height: 740px) {
+  .hero {
+    min-height: 720px;
+
+    padding-top: 100px;
+  }
+} */
+
+@media (max-height: 620px) {
+  .hero {
+    min-height: 600px;
+
+    padding-top: 100px;
+  }
+}
+
+@media (max-height: 575px) {
+  .hero {
+    min-height: 550px;
+
+    padding-top: 100px;
   }
 }
