@@ -59,6 +59,12 @@ document.addEventListener("click", (e) => {
   }
 });
 
+menu.addEventListener("click", () => {
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  }
+});
+
 const body = document.body;
 console.log("body");
 
